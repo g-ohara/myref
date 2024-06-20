@@ -1,0 +1,8 @@
+services:
+  bibtex-tidy:
+    build: .
+    volumes:
+      - ./:${PWD}
+    working_dir: ${PWD}
+    tty: true
+    command: /bin/bash -c "bibtex-tidy --curly --blank-lines --sort=key --strip-enclosing-braces --sort-fields --trailing-commas --remove-empty-fields --wrap myref.bib"
