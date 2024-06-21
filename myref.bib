@@ -61,6 +61,28 @@
   url           = {https://api.semanticscholar.org/CorpusID:120475968},
 }
 
+@article{brophy2023adapting,
+  title         = {
+    Adapting and Evaluating Influence-Estimation Methods for Gradient-Boosted
+    Decision Trees
+  },
+  author        = {Jonathan Brophy and Zayd Hammoudeh and Daniel Lowd},
+  year          = {2023},
+  journal       = {Journal of Machine Learning Research},
+  volume        = {24},
+  number        = {154},
+  pages         = {1--48},
+  url           = {http://jmlr.org/papers/v24/22-0449.html},
+}
+
+@book{cook1982residuals,
+  title         = {Residuals and Influence in Regression},
+  author        = {Sanford Weisberg and Cook, {R D}},
+  year          = {1982},
+  publisher     = {Chapman \& Hall},
+  language      = {English},
+}
+
 @book{cover1991elements,
   title         = {Elements of Information Theory},
   author        = {Thomas M. Cover and Joy A. Thomas},
@@ -83,6 +105,23 @@
   booktitle     = {Probabilistic Inductive Logic Programming},
   publisher     = {Springer-Verlag},
   pages         = {1--27},
+}
+
+@inproceedings{feldman2020what,
+  title         = {
+    What Neural Networks Memorize and Why: Discovering the Long Tail via
+    Influence Estimation
+  },
+  author        = {Feldman, Vitaly and Zhang, Chiyuan},
+  year          = {2020},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  publisher     = {Curran Associates, Inc.},
+  volume        = {33},
+  pages         = {2881--2891},
+  url           = {
+    https://proceedings.neurips.cc/paper\_files/paper/2020/file/1e14bfe2714193e7af5abc64ecbd6b46-Paper.pdf
+  },
+  editor        = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
 }
 
 @article{friedman2001greedy,
@@ -124,24 +163,6 @@
   doi           = {10.1007/s10994-023-06495-7},
   issn          = {1573-0565},
   url           = {https://doi.org/10.1007/s10994-023-06495-7},
-  abstract      = {
-    Good models require good training data. For overparameterized deep models,
-    the causal relationship between training data and model predictions is
-    increasingly opaque and poorly understood. Influence analysis partially
-    demystifies training's underlying interactions by quantifying the amount
-    each training instance alters the final model. Measuring the training
-    data's influence exactly can be provably hard in the worst case; this has
-    led to the development and use of influence estimators, which only
-    approximate the true influence. This paper provides the first comprehensive
-    survey of training data influence analysis and estimation. We begin by
-    formalizing the various, and in places orthogonal, definitions of training
-    data influence. We then organize state-of-the-art influence analysis
-    methods into a taxonomy; we describe each of these methods in detail and
-    compare their underlying assumptions, asymptotic complexities, and overall
-    strengths and weaknesses. Finally, we propose future research directions to
-    make influence analysis more useful in practice as well as more
-    theoretically and empirically sound.
-  },
 }
 
 @article{hu2019optimal,
@@ -188,21 +209,6 @@
   url           = {https://proceedings.mlr.press/v70/koh17a.html},
   editor        = {Precup, Doina and Teh, Yee Whye},
   pdf           = {http://proceedings.mlr.press/v70/koh17a/koh17a.pdf},
-  abstract      = {
-    How can we explain the predictions of a black-box model? In this paper, we
-    use influence functions -- a classic technique from robust statistics -- to
-    trace a model's prediction through the learning algorithm and back to its
-    training data, thereby identifying training points most responsible for a
-    given prediction. To scale up influence functions to modern machine
-    learning settings, we develop a simple, efficient implementation that
-    requires only oracle access to gradients and Hessian-vector products. We
-    show that even on non-convex and non-differentiable models where the theory
-    breaks down, approximations to influence functions can still provide
-    valuable information. On linear models and convolutional neural networks,
-    we demonstrate that influence functions are useful for multiple purposes:
-    understanding model behavior, debugging models, detecting dataset errors,
-    and even creating visually-indistinguishable training-set attacks.
-  },
 }
 
 @inproceedings{koh2019accuracy,
@@ -326,10 +332,6 @@
   doi           = {https://doi.org/10.1016/j.patcog.2016.11.008},
   issn          = {0031-3203},
   url           = {https://www.sciencedirect.com/science/article/pii/S0031320316303582},
-  keywords      = {
-    Deep neural networks, Heatmapping, Taylor decomposition, Relevance
-    propagation, Image recognition
-  },
 }
 
 @inproceedings{patel2008investigating,
@@ -369,11 +371,6 @@
   booktitle     = {2020 International Joint Conference on Neural Networks (IJCNN)},
   pages         = {1--9},
   doi           = {10.1109/IJCNN48605.2020.9206710},
-  keywords      = {
-    Data models;Predictive models;Analytical models;Machine learning;Neural
-    networks;Training data;Decision trees;XAI;Interpretable Machine
-    Learning;Perturbation-based Explanation Methods;Data Sampling
-  },
 }
 
 @inproceedings{ren2015exploring,
@@ -415,10 +412,6 @@
   isbn          = {978-1-4503-4232-2},
   url           = {https://doi.org/10.1145/2939672.2939778},
   numpages      = {10},
-  keywords      = {
-    black box classifier, explaining machine learning, interpretable machine
-    learning, interpretability
-  },
 }
 
 @article{ribeiro2018anchors,
@@ -463,12 +456,6 @@
   number        = {3},
   pages         = {247--278},
   doi           = {10.1109/JPROC.2021.3060483},
-  keywords      = {
-    Deep learning;Systematics;Neural networks;Artificial intelligence;Machine
-    learning;Unsupervised learning;Problem-solving;Best practices;Black-box
-    models;deep learning;explainable artificial intelligence
-    (XAI);Interpretability;model transparency;neural networks
-  },
 }
 
 @inproceedings{sanchez2015towards,
@@ -491,6 +478,18 @@
   publisher     = {Inter-university Consortium for Political and Social Research},
 }
 
+@inproceedings{scholkopf2001generalized,
+  title         = {A Generalized Representer Theorem},
+  author        = {Sch{\"o}lkopf, Bernhard and Herbrich, Ralf and Smola, Alex J.},
+  year          = {2001},
+  booktitle     = {Computational Learning Theory},
+  publisher     = {Springer Berlin Heidelberg},
+  address       = {Berlin, Heidelberg},
+  pages         = {416--426},
+  isbn          = {978-3-540-44581-4},
+  editor        = {Helmbold, David and Williamson, Bob},
+}
+
 @inproceedings{sculley2015hidden,
   title         = {Hidden technical debt in machine learning systems},
   author        = {
@@ -500,6 +499,24 @@
   },
   year          = {2015},
   booktitle     = {Neural Information Processing Systems (NIPS)},
+}
+
+@inproceedings{sharchilev2018finding,
+  title         = {Finding Influential Training Samples for Gradient Boosted Decision Trees},
+  author        = {
+    Sharchilev, Boris and Ustinovskiy, Yury and Serdyukov, Pavel and de Rijke,
+    Maarten
+  },
+  year          = {2018},
+  month         = {10--15 Jul},
+  booktitle     = {Proceedings of the 35th International Conference on Machine Learning},
+  publisher     = {PMLR},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {80},
+  pages         = {4577--4585},
+  url           = {https://proceedings.mlr.press/v80/sharchilev18a.html},
+  editor        = {Dy, Jennifer and Krause, Andreas},
+  pdf           = {http://proceedings.mlr.press/v80/sharchilev18a/sharchilev18a.pdf},
 }
 
 @article{strumbelj2010efficient,
@@ -553,28 +570,8 @@
   issn          = {0360-0300},
   url           = {https://doi.org/10.1145/3551636},
   issue_date    = {August 2023},
-  abstract      = {
-    The prosperity of machine learning has been accompanied by increasing
-    attacks on the training process. Among them, poisoning attacks have become
-    an emerging threat during model training. Poisoning attacks have profound
-    impacts on the target models, e.g., making them unable to converge or
-    manipulating their prediction results. Moreover, the rapid development of
-    recent distributed learning frameworks, especially federated learning, has
-    further stimulated the development of poisoning attacks. Defending against
-    poisoning attacks is challenging and urgent. However, the systematic review
-    from a unified perspective remains blank. This survey provides an in-depth
-    and up-to-date overview of poisoning attacks and corresponding
-    countermeasures in both centralized and federated learning. We firstly
-    categorize attack methods based on their goals. Secondly, we offer detailed
-    analysis of the differences and connections among the attack techniques.
-    Furthermore, we present countermeasures in different learning framework and
-    highlight their advantages and disadvantages. Finally , we discuss the
-    reasons for the feasibility of poisoning attacks and address the potential
-    research directions from attacks and defenses perspectives, separately.
-  },
   articleno     = {166},
   numpages      = {35},
-  keywords      = {Deep learning, federated learning, poisoning attack, backdoor attack},
 }
 
 @article{tsoumakas2006multi,

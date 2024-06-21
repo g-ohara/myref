@@ -5,4 +5,16 @@ services:
       - ./:${PWD}
     working_dir: ${PWD}
     tty: true
-    command: /bin/bash -c "bibtex-tidy --curly --blank-lines --sort=key --strip-enclosing-braces --sort-fields --trailing-commas --remove-empty-fields --wrap myref.bib"
+    command: /bin/bash -c "bibtex-tidy \
+                           --modify \
+                           --omit=abstract,keywords \
+                           --curly \
+                           --blank-lines \
+                           --sort=key \
+                           --strip-enclosing-braces \
+                           --sort-fields \
+                           --strip-comments \
+                           --trailing-commas \
+                           --remove-empty-fields \
+                           --wrap \
+                           myref.bib"
